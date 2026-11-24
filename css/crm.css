@@ -1,0 +1,100 @@
+/* ==========================================================================
+   JETA Performance — card 01: apresentação de funil + CRM ao cliente
+   ========================================================================== */
+.stack__visual--crm {
+  display: grid; place-items: center;
+  padding: clamp(16px, 2.4vw, 28px);
+  background: radial-gradient(80% 70% at 70% 30%, rgba(242, 103, 34, 0.28), transparent 70%), #120d0a;
+}
+.meet {
+  position: relative;
+  width: 100%;
+  border-radius: 16px;
+  background: #0e0e0e;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 40px 80px -30px rgba(0, 0, 0, 0.9);
+}
+.meet__bar {
+  display: flex; align-items: center; gap: 12px;
+  padding: 10px 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.6875rem;
+}
+.meet__dots { display: flex; gap: 5px; }
+.meet__dots i { width: 8px; height: 8px; border-radius: 50%; background: rgba(255, 255, 255, 0.18); }
+.meet__title { color: var(--muted); font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.meet__live {
+  margin-left: auto; flex: none;
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 3px 9px; border-radius: 999px;
+  background: rgba(242, 103, 34, 0.14); color: var(--accent-2); font-weight: 800;
+}
+.meet__live::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: live-pulse 1.6s ease-in-out infinite; }
+@keyframes live-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.25; } }
+
+.meet__body { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 18px; padding: 18px 18px 22px; }
+.meet .meet__label { max-width: none; font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted-2); margin-bottom: 10px; }
+
+/* Funil */
+.funnel { display: grid; gap: 6px; justify-items: center; align-content: start; }
+.funnel .meet__label { justify-self: start; }
+.funnel__step {
+  display: grid; place-items: center;
+  width: var(--w); height: 34px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, rgba(242, 103, 34, 0.22), rgba(242, 103, 34, 0.38));
+  border: 1px solid rgba(242, 103, 34, 0.35);
+  transform-origin: center;
+}
+.funnel__step b { font-size: 0.6875rem; color: #f3d9c9; font-weight: 700; }
+.funnel__step--win { background: var(--accent); border-color: var(--accent); }
+.funnel__step--win b { color: var(--accent-ink); }
+
+/* CRM */
+.stack__visual--crm { grid-template-columns: minmax(0, 1fr); }
+.meet, .meet__body > * { min-width: 0; }
+.crm__cols { position: relative; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
+.crm__col { display: grid; gap: 6px; align-content: start; min-height: 132px; padding: 6px; border-radius: 8px; background: rgba(255, 255, 255, 0.03); }
+.crm__head { font-size: 0.5625rem; font-weight: 700; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.crm__col--win .crm__head { color: var(--accent-2); }
+.crm__card {
+  height: 26px; border-radius: 6px;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0.28)) 7px 8px / 60% 3px no-repeat,
+    linear-gradient(rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.14)) 7px 15px / 38% 3px no-repeat,
+    #1d1d1d;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+.crm__card--win, .crm__card--move {
+  background:
+    linear-gradient(rgba(20, 8, 0, 0.55), rgba(20, 8, 0, 0.55)) 7px 8px / 60% 3px no-repeat,
+    linear-gradient(rgba(20, 8, 0, 0.35), rgba(20, 8, 0, 0.35)) 7px 15px / 38% 3px no-repeat,
+    var(--accent);
+  border-color: transparent;
+}
+.crm__card--move { position: relative; z-index: 2; box-shadow: 0 10px 20px -8px rgba(242, 103, 34, 0.7); }
+
+/* Câmera da reunião */
+.meet__cam {
+  position: absolute; right: -14px; bottom: -22px; z-index: 3;
+  width: 128px; aspect-ratio: 4 / 3;
+  border-radius: 12px; overflow: hidden;
+  border: 2px solid #0e0e0e;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(242, 103, 34, 0.5);
+}
+.meet__cam img { width: 100%; height: 100%; object-fit: cover; object-position: 76% 30%; transform: scale(1.6); transform-origin: 76% 30%; }
+.meet__cam span { position: absolute; left: 6px; bottom: 5px; padding: 2px 6px; border-radius: 4px; background: rgba(0, 0, 0, 0.65); font-size: 0.5625rem; font-weight: 700; color: #fff; }
+
+@media (max-width: 1024px) {
+  .stack__visual--crm { height: auto; min-height: 0; padding: 18px 18px 34px; }
+}
+@media (max-width: 767px) {
+  /* no celular os cards são mais altos que a tela: sem empilhar, um depois do outro */
+  .stack__card { position: relative; top: auto; }
+  .meet__body { grid-template-columns: 1fr; gap: 14px; padding: 14px; }
+  .funnel__step { height: 28px; }
+  .crm__col { min-height: 104px; }
+  .meet__cam { width: 96px; right: -6px; bottom: -20px; }
+  .meet__title { font-size: 0.625rem; }
+}
+@media (prefers-reduced-motion: reduce) { .meet__live::before { animation: none; } }
