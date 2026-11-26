@@ -34,12 +34,12 @@
 
   <link rel="preload" as="image" href="assets/images/hero-judson.webp" fetchpriority="high">
 
-  <link rel="stylesheet" href="css/style.css?v=2.2.3">
+  <link rel="stylesheet" href="css/style.css?v=2.3.0">
   <link rel="stylesheet" href="css/animations.css?v=2.2.0">
-  <link rel="stylesheet" href="css/responsive.css?v=2.2.1">
+  <link rel="stylesheet" href="css/responsive.css?v=2.3.0">
   <link rel="stylesheet" href="css/modal.css?v=2.2.0">
-  <link rel="stylesheet" href="css/services.css?v=2.1.3">
-  <link rel="stylesheet" href="css/crm.css?v=1.0.3">
+  <link rel="stylesheet" href="css/services.css?v=2.3.0">
+  <link rel="stylesheet" href="css/crm.css?v=2.3.0">
 
   <script>
     /* Configuração comercial do site. Preencha antes de publicar. */
@@ -126,7 +126,6 @@
         </picture>
       </figure>
       <div class="wrap hero__inner">
-        <p class="eyebrow" data-hero-fade>Tráfego pago e vendas</p>
         <h1 class="hero__title" id="hero-title" data-split>
           Não faturou <em>R$&nbsp;120&nbsp;mil</em> em anúncios nos últimos 3&nbsp;meses? Tem algo errado.
         </h1>
@@ -198,24 +197,30 @@
         </div>
       </div>
       <div class="wrap retention__body">
-        <div class="versus" aria-hidden="true">
+        <div class="versus" role="img" aria-label="Período dos clientes: 1,5 ano na nossa agência contra 6 meses na média do mercado">
           <div class="versus__item versus__item--jeta">
+            <span class="versus__label">Período dos clientes</span>
             <span class="versus__num" data-count-to="1,5">1,5</span>
             <span class="versus__unit">ano</span>
             <span class="versus__bar"><span data-bar></span></span>
-            <span class="versus__who">JETA</span>
+            <span class="versus__who">Nossa agência</span>
           </div>
           <div class="versus__item">
+            <span class="versus__label">Período dos clientes</span>
             <span class="versus__num">6</span>
             <span class="versus__unit">meses</span>
             <span class="versus__bar versus__bar--short"><span data-bar></span></span>
-            <span class="versus__who">Mercado</span>
+            <span class="versus__who">Média do mercado</span>
           </div>
         </div>
         <div class="retention__text">
           <p class="lead-lg" data-reveal>Você já parou para pensar no que realmente define a qualidade de uma agência? É simples: <em>quanto tempo os clientes permanecem nela.</em></p>
           <p data-reveal>Afinal, concorda que quanto mais tempo um cliente escolhe ficar, melhor a agência deve ser? Na Jeta, o tempo médio de permanência dos nossos clientes é de 1 ano e meio, enquanto a média do mercado mal chega a 6 meses.</p>
           <p data-reveal>Isso não acontece por acaso. Se você busca um parceiro estratégico comprometido com o seu crescimento no longo prazo, inscreva-se agora e venha fazer parte da Jeta.</p>
+          <a class="btn btn--primary btn--lg section-cta" href="#diagnostico" data-track="cta_permanencia" data-magnetic data-reveal>
+            Quero fazer parte da Jeta
+            <svg class="btn__arrow" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11m-4-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
         </div>
       </div>
     </section>
@@ -276,7 +281,7 @@
         <h2 class="display" id="services-title" data-split>Anúncios com estratégia são <em>investimento que gera lucro.</em></h2>
       </div>
 
-      <div class="wrap stack">
+      <div class="wrap stack" data-carousel aria-label="O que entregamos">
         <article class="stack__card" data-stack>
           <div class="stack__text">
             <span class="stack__num">01</span>
@@ -294,15 +299,13 @@
                 <div class="funnel">
                   <p class="meet__label">Funil de vendas</p>
                   <span class="funnel__step" style="--w:100%"><b>Alcance</b></span>
-                  <span class="funnel__step" style="--w:80%"><b>Leads</b></span>
-                  <span class="funnel__step" style="--w:60%"><b>Atendimento</b></span>
-                  <span class="funnel__step funnel__step--win" style="--w:42%"><b>Vendas</b></span>
+                  <span class="funnel__step" style="--w:74%"><b>Leads</b></span>
+                  <span class="funnel__step funnel__step--win" style="--w:48%"><b>Vendas</b></span>
                 </div>
                 <div class="crm">
                   <p class="meet__label">CRM</p>
                   <div class="crm__cols">
                     <div class="crm__col"><span class="crm__head">Novo lead</span><span class="crm__card"></span><span class="crm__card"></span><span class="crm__card crm__card--move" data-crm-move></span></div>
-                    <div class="crm__col"><span class="crm__head">Atendimento</span><span class="crm__card"></span><span class="crm__card"></span></div>
                     <div class="crm__col"><span class="crm__head">Proposta</span><span class="crm__card"></span></div>
                     <div class="crm__col crm__col--win"><span class="crm__head">Venda</span><span class="crm__card crm__card--win"></span></div>
                   </div>
@@ -315,7 +318,7 @@
         <article class="stack__card" data-stack>
           <div class="stack__text">
             <span class="stack__num">02</span>
-            <h3>Criativos de +R$100 Milhões: <em>Sua Vantagem Injusta</em></h3>
+            <h3>Criativos que já geraram <em>+R$100 milhões em vendas</em></h3>
             <p>Você recebe acesso ao nosso cofre de criativos de alta conversão. São os mesmos vídeos e artes que já geraram milhões em vendas, prontos para você usar e sair na frente da concorrência.</p>
           </div>
           <figure class="stack__visual stack__visual--ad" aria-hidden="true">
@@ -389,7 +392,7 @@
       <div class="wrap">
         <p class="eyebrow">Transformação</p>
         <h2 class="display shift__title" id="shift-title" data-split>O que vai acontecer <em>depois</em> na sua empresa?</h2>
-        <div class="shift__table">
+        <div class="shift__table" data-carousel aria-label="Antes e depois">
           <div class="shift__col shift__col--before">
             <h3>Antes</h3>
             <ul>
@@ -409,6 +412,12 @@
             </ul>
           </div>
         </div>
+        <div class="shift__cta">
+          <a class="btn btn--primary btn--lg" href="#diagnostico" data-track="cta_transformacao" data-magnetic data-reveal>
+            Quero esse depois na minha empresa
+            <svg class="btn__arrow" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11m-4-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -426,6 +435,10 @@
             <li><span>Instagram da agência:</span> <a href="https://www.instagram.com/jetaperformance/" target="_blank" rel="noopener">@jetaperformance</a></li>
             <li><span>Instagram Pessoal:</span> <a href="https://www.instagram.com/judsonnatividade/" target="_blank" rel="noopener">@judsonnatividade</a></li>
           </ul>
+          <a class="btn btn--primary btn--lg section-cta" href="#diagnostico" data-track="cta_sobre" data-magnetic data-reveal>
+            Quero meu diagnóstico gratuito
+            <svg class="btn__arrow" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11m-4-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
         </div>
       </div>
     </section>
@@ -540,6 +553,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
   <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
   <script src="js/main.js?v=2.2.0" defer></script>
-  <script src="js/animations.js?v=2.2.2" defer></script>
+  <script src="js/carousel.js?v=1.0.0" defer></script>
+  <script src="js/animations.js?v=2.3.0" defer></script>
 </body>
 </html>

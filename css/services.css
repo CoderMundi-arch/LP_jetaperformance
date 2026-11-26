@@ -134,6 +134,7 @@
   .stack__visual--team { grid-template-columns: 1fr; height: auto; min-height: 0; padding: 16px; }
   .stack__visual--team .script { display: none; }
   .chip--sale { top: auto; bottom: 12px; right: 12px; }
+  .stack__visual--team .chat { padding-bottom: 64px; }
   .stack__visual--calendar { padding: 18px 14px 14px; }
   .cal { gap: 4px; }
   .cal span[data-tag]::before { font-size: 0.5rem; padding: 3px 6px; }

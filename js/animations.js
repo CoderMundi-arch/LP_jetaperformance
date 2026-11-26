@@ -299,7 +299,6 @@
         scrollTrigger: { trigger: '.stack__visual--crm', start: 'top 80%', toggleActions: 'play pause resume pause' } })
         .to(mover, { x: function () { return step(); } }, '+=0.6')
         .to(mover, { x: function () { return step() * 2; } }, '+=0.6')
-        .to(mover, { x: function () { return step() * 3; } }, '+=0.6')
         .to(mover, { scale: 1.08, duration: 0.25, yoyo: true, repeat: 1, ease: 'power1.inOut' })
         .to(mover, { opacity: 0, duration: 0.4 }, '+=0.5')
         .set(mover, { x: 0 })

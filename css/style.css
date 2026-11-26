@@ -586,3 +586,12 @@ body.is-locked { overflow: hidden; }
 .form__status:empty { display: none; }
 .form__status.is-warn { color: #ffb36b; }
 .btn.is-loading { pointer-events: none; opacity: 0.8; }
+
+/* ==========================================================================
+   Período dos clientes, CTAs extras e carrosséis (mobile)
+   ========================================================================== */
+.versus__label { grid-column: 1 / -1; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted-2); margin-bottom: -4px; }
+.versus__item--jeta .versus__who { color: var(--accent-2); }
+.section-cta { justify-self: start; margin-top: 8px; }
+.shift__cta { margin-top: clamp(40px, 5vw, 56px); }
+.carousel-dots { display: none; }

@@ -150,3 +150,38 @@
 @media (max-width: 400px) {
   .choices { grid-template-columns: 1fr; }
 }
+
+/* Carrosséis de arrastar no celular: "O que entregamos" e "Antes / Depois" */
+@media (max-width: 767px) {
+  [data-carousel] {
+    display: flex; gap: 12px;
+    overflow-x: auto; overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    margin-inline: calc(var(--gutter) * -1);
+    padding-inline: var(--gutter);
+    scroll-padding-inline: var(--gutter);
+  }
+  [data-carousel]::-webkit-scrollbar { display: none; }
+  [data-carousel] > * { flex: 0 0 86%; min-width: 0; scroll-snap-align: start; }
+
+  .stack { align-items: stretch; }
+  .stack__card { position: relative; top: auto; align-content: start; }
+
+  .shift__table { border-top: 0; }
+  .shift__col, .shift__col:first-child, .shift__col + .shift__col {
+    margin-top: 0; padding: 24px 20px 8px;
+    border: 1px solid var(--line); border-radius: 20px;
+    background: rgba(255, 255, 255, 0.02);
+  }
+  .shift__col--after { border-color: rgba(242, 103, 34, 0.35); background: rgba(242, 103, 34, 0.06); }
+  .shift__col li:last-child { border-bottom: 0; }
+
+  .carousel-dots { display: flex; justify-content: center; gap: 8px; margin-top: 18px; }
+  .carousel-dots button { width: 8px; height: 8px; padding: 0; border-radius: 999px; background: rgba(255, 255, 255, 0.22); transition: width 0.3s var(--ease-out), background-color 0.3s; }
+  .carousel-dots button[aria-current="true"] { width: 24px; background: var(--accent); }
+  .carousel-dots button::before { content: ""; position: absolute; inset: -12px; } /* área de toque maior */
+  .carousel-dots button { position: relative; }
+
+  .section-cta, .shift__cta .btn { width: 100%; }
+}
